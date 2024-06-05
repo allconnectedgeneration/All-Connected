@@ -22,7 +22,7 @@ public class Usuario {
 	
 	@NotBlank(message = "O atributo e-mail é obrigatório!")
 	@Size(min = 3, max = 100, message = "O campo e-mail precisa ter entre 3 à 100 caracteres")
-	private String email;
+	private String usuario;
 	
 	@NotBlank(message = "O atributo senha é obrigatório!")
 	@Size(min = 3, max = 100, message = "O campo senha precisa ter entre 3 à 100 caracteres")
@@ -30,7 +30,7 @@ public class Usuario {
 	
 	@Size(max = 5000)
 	private String foto;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -47,12 +47,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {
@@ -62,6 +62,16 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
+
 	
 	
 	
