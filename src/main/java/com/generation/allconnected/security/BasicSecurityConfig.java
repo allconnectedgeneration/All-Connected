@@ -62,7 +62,13 @@ public class BasicSecurityConfig {
 
     	http
 	        .authorizeHttpRequests((auth) -> auth
-	        		.requestMatchers("/produto").permitAll()
+	        		.requestMatchers("/produto/all").permitAll()
+	        		.requestMatchers("produto/{id}").permitAll()
+	        		.requestMatchers("produto/nome/{nome}").permitAll()
+	        		.requestMatchers("categoria/all").permitAll()
+	        		.requestMatchers("categoria/{id}").permitAll()
+	        		.requestMatchers("categoria/especificacao/{especificacao}").permitAll()
+	        		.requestMatchers("categoria/tipo/{tipo}").permitAll()
 	                .requestMatchers("/usuarios/logar").permitAll()
 	                .requestMatchers("/usuarios/cadastrar").permitAll()
 	                .requestMatchers("/error/**").permitAll()
