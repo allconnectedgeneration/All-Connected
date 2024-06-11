@@ -1,5 +1,6 @@
 package com.generation.allconnected.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class Usuario {
 	@Size(min = 3, max = 100, message = "O campo nome precisa ter entre 3 à 100 caracteres")
 	private String nome;
 	
+	@Schema(example = "email@email.com.br")
 	@NotBlank(message = "O atributo e-mail é obrigatório!")
 	@Size(min = 3, max = 100, message = "O campo e-mail precisa ter entre 3 à 100 caracteres")
 	private String usuario;
